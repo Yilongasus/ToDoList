@@ -1,0 +1,23 @@
+html, body {
+    margin:0;
+    padding:0;
+    height: 100%;  
+    font-family: "Microsoft Jhenghei", "Avant Garde", sans;         
+}
+
+/* list主體 */
+main {
+    margin: auto;
+    background-color: #ffffff;
+}
+
+/* list標題 */
+h3 {
+    color: #ffffff;
+    background-color: #253449;
+}
+
+#search {
+    height: 100px; width: 100%;
+    background-image: url("/static/search.png") no-repeat;    
+}
