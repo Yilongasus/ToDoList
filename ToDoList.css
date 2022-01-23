@@ -3,19 +3,36 @@ html, body {
     padding:0;
     height: 100%;  
     font-family: "Microsoft Jhenghei", "Avant Garde", sans;         
+    background-color: #555562;
 }
 
-/* list主體 */
+/* 任務清單主體 */
 main {
-    margin: auto;
-    width: 55%;
-    background-color: #ffffff;
+    box-shadow:10px 10px 0px #BCC2C8;
+    height:auto;
+    width: 606px;
+    margin:0 auto;
+    margin-top: 15px;
+    padding:18px 12px;  
+    border-radius:5px;
+    background-color: #F4F5F6;  
+}
+
+main:hover {  
+    box-shadow:10px 10px 0px #42424C;
 }
 
 /* list標題 */
-h3 {
+h2 {
     color: #ffffff;
-    background-color: #253449;
+    margin-top: 0;
+    padding: 0.3rem 0;
+    text-align: center;
+    text-shadow: 1px 1px 0 #ffffff,
+                 2px 2px 0 #000,
+                 3px 3px 0 #000;
+    background-color: #87A0C0; 
+    transition: 0.7s;
 }
 
 #search {
@@ -34,6 +51,54 @@ h3 {
                 4px 3px 0px #253449;    
 }
 
-li::marker {
-    color: blue;
+ul {
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+ul li {
+    list-style: none;
+    font-weight: 700;
+    margin: 0;
+    display: inline-block;    
+    cursor: pointer;
+    border-radius: 5px 5px 0 0;
+}
+
+/* 未完成頁籤 */
+ul li:nth-child(1) {
+    background-color: #87A0C0;    
+}
+
+ul li:nth-child(1):hover {
+    background-color: #374D6D;
+}
+
+/* 已完成頁籤 */
+ul li:nth-child(2) {
+    background-color: #DE6847;    
+}
+
+ul li:nth-child(2):hover {
+    background-color: #9C371C;
+}
+
+/* 所有頁籤 */
+ul li:nth-child(3) {
+    background-color: #858585;    
+}
+
+ul li:nth-child(3):hover {
+    background-color: #525252;
+}
+
+ul li:hover {
+    transition: 0.5s;
+}
+
+li a {
+    color: #ffffff;
+    text-shadow: 1px 1px 0 #000;    
+    text-decoration: none;
+    padding: 0 3rem;
 }

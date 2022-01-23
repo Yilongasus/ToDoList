@@ -29,42 +29,6 @@ $(document).ready(function(){
                 this.listItem = '';
             },
 
-            // // /* 更新任務狀態 */
-            // computed: {
-            //     filterItems:function() {
-                
-            //         /* 當任務狀態未勾選時，
-            //            就顯示在未完成頁籤中。 */                    
-            //         if (this.status == 'no') {
-            //             var Items = [];
-            //             this.items.forEach(function(item) {
-            //                 if (!item.completed) {
-            //                     Items.push(item);
-            //                 }
-            //             })
-            //             return Items;
-            //         }
-
-            //         /* 當任務狀態勾選時，
-            //            就顯示在完成頁籤中。 */                       
-            //         else if (this.status == 'yes') {
-            //             var Items = [];
-            //             this.items.forEach(function(item) {
-            //                 if (item.completed) {
-            //                     Items.push(item);
-            //                 }
-            //             })
-            //             return Items;
-            //         }
-
-            //         /* 顯示所有任務。 */                       
-            //         else if (this.status == 'all') {
-            //             return this.Items;
-            //         }
-            //         return [];
-            //     }
-            // },
-
             /* 刪除任務 */
             remove:function(index) {
                 this.items.splice(index, 1); /* 從此任務開始刪除，到這個任務為止。 */
@@ -74,6 +38,45 @@ $(document).ready(function(){
                 this.items.splice(index);    /* 刪除全部。 */
                 return confirm("要刪除全部任務嗎？");                
             }
+        },
+
+        /* 更新任務狀態 */
+        computed: {  /* computed要在methods外面 */
+            filterItems:function() {
+            
+                /* 當任務狀態未勾選時，
+                   就顯示在未完成頁籤中。 */                    
+                if (this.status == 'no') {
+                    $('h2').css("background-color", "#87A0C0");
+                    var Items = [];
+                    this.items.forEach(function(item) {
+                        if (!item.completed) {
+                            Items.push(item);
+                        }
+                    })
+                    return Items;
+                }
+
+                /* 當任務狀態勾選時，
+                   就顯示在完成頁籤中。 */                       
+                else if (this.status == 'yes') {
+                    $('h2').css("background-color", "#DE6847");                        
+                    var Items = [];
+                    this.items.forEach(function(item) {
+                        if (item.completed) {
+                            Items.push(item);
+                        }
+                    })
+                    return Items;
+                }
+
+                /* 顯示所有任務。 */                       
+                else if (this.status == 'all') {
+                    $('h2').css("background-color", "#858585");
+                    return this.items;
+                }
+            }
         }    
     });
+
 });

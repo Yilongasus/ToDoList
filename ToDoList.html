@@ -17,24 +17,20 @@
                 <li><a href="#" title="所有任務" :class="{'active':status == 'all'}" @click="status='all'">所有</a></li>
             </ul>
         </aside>    
-        <h3>To&emsp;Do&emsp;List</h3>    
-        <button type="button" id="search"></button>
-        <input type="text" v-model="listItem">
-        <button type="button" id="add" @click="add">新增任務</button>
-        <button type="button" id="removeAll" @click="removeAll(index)">刪除全部任務</button>
-        <ol>
-            <li v-for="(item, index) in items">
-                <input type="checkbox" v-model="item.completed" :id="item.id">完成
-                <label
-                :class="{'completed':item.completed}"
-                :for="item.id"
-              >
-                {{ item.text }}
-                
-                <button type="button" id="remove" @click="remove(index)">刪除任務</button>  
-                </label>                              
-            </li>
-        </ol>    
+        <h2>To&nbsp;Do&nbsp;List</h2>    
+        <!-- <button type="button" id="search"></button> -->
+        <section>
+            <input type="text" v-model="listItem" placeholder="請輸入任務名稱...">
+            <button type="button" id="add" @click="add">新增任務</button>
+            <ol>
+                <li v-for="(item, index) in filterItems">
+                    <input type="checkbox" v-model="item.completed" :id="item.id">完成
+                    {{ item.text }}
+                    <button type="button" id="remove" @click="remove(index)">刪除任務</button>           
+                </li>
+            </ol>   
+            <button type="button" id="removeAll" @click="removeAll(index)">刪除全部任務</button>  
+        </section>       
     </main>    
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
 <script src="https://unpkg.com/vue@2.6.12/dist/vue.js"></script>  
