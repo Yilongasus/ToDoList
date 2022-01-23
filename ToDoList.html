@@ -10,15 +10,29 @@
 </head>
 <body>
     <main id="list">
+        <aside>
+            <ul>
+                <li><a href="#" title="未完成任務" :class="{'active':status == 'no'}" @click="status='no'">未完成</a></li>
+                <li><a href="#" title="已完成任務" :class="{'active':status == 'yes'}" @click="status='yes'">已完成</a></li>
+                <li><a href="#" title="所有任務" :class="{'active':status == 'all'}" @click="status='all'">所有</a></li>
+            </ul>
+        </aside>    
         <h3>To&emsp;Do&emsp;List</h3>    
         <button type="button" id="search"></button>
         <input type="text" v-model="listItem">
-        <button type="button" id="add" @click="add">新增項目</button>
-        <button type="button" id="removeAll" @click="removeAll(index)">刪除全部項目</button>
+        <button type="button" id="add" @click="add">新增任務</button>
+        <button type="button" id="removeAll" @click="removeAll(index)">刪除全部任務</button>
         <ol>
             <li v-for="(item, index) in items">
+                <input type="checkbox" v-model="item.completed" :id="item.id">完成
+                <label
+                :class="{'completed':item.completed}"
+                :for="item.id"
+              >
                 {{ item.text }}
-                <button type="button" id="remove" @click="remove(index)">刪除項目</button>                                
+                
+                <button type="button" id="remove" @click="remove(index)">刪除任務</button>  
+                </label>                              
             </li>
         </ol>    
     </main>    
