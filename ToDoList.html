@@ -24,7 +24,7 @@
             <button type="button" id="add" @click="add">+</button>
             <ol>
                 <li v-for="(item, index) in filterItems">
-                    <input type="checkbox" v-model="item.completed" :id="item.id">
+                    <input type="checkbox" v-model="item.completed">
                     <label :class="{ 'completed':item.completed }">{{ item.text }}</label> 
                     &emsp;<button type="button" id="remove" @click="remove(index)">一</button>                         
                 </li>

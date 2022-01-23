@@ -1,5 +1,6 @@
 $(window).on('load', function(){
-    /* 載入畫面用 */
+    // $('#list').hide();
+    // $('#list').fadeIn(100);  
 });
 
 $(document).ready(function(){
@@ -10,7 +11,7 @@ $(document).ready(function(){
             status: 'no',   /* 預設任務狀態為未完成 */
             items:[{
                 id: '',
-                text:  '',
+                text: '',
                 completed: false
             }]
         },
