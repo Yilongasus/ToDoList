@@ -3,31 +3,38 @@ $(window).on('load', function(){
 });
 
 $(document).ready(function(){
-new Vue({
-    el:'#list',
-    data:{
-        listItem:'',        /* 用來儲存user輸入的項目 */
-        items:[{
-            // id: '',
-            // text:  ''
-        }]
-    },
-    methods:{
-        /* 新增任務 */
-        add:function(){
-            var text = this.listItem;
-            var id = Math.floor(Date.now());
-            this.items.push({
-                id: id,
-                text: text
-            });
-            this.listItem = '';
+    new Vue({
+        el:'#list',
+        data:{
+            listItem:'',    /* 用來儲存user輸入的項目 */
+            items:[{
+                id: '',
+                text:  '',
+                completed: false
+            }]
         },
+        methods:{
+            /* 新增任務 */
+            add:function() {
+                var text = this.listItem;
+                var id = Math.floor(Date.now());
+                if (!text) { return false }
 
-        /* 刪除任務 */
-        remove:function(item){
-            this.items.splice(item, 1);
-        }
-    }    
-})
+                this.items.push({
+                    id: id,
+                    text: text,
+                    completed: false
+                });
+                this.listItem = '';
+            },
+
+            /* 刪除任務 */
+            remove:function(index) {
+                this.items.splice(index, 1); /* 從此項目開始刪除，到這個項目為止。 */
+            },
+            removeAll:function(index) {
+                this.items.splice(index);    /* 刪除全部。 */
+            }
+        }    
+    });
 });

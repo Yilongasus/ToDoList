@@ -10,18 +10,20 @@
 </head>
 <body>
     <main id="list">
-        <h3>To&emsp;Do&emsp;List</h3><button type="button" id="search"></button>      
-        <input type="text" v-model="listItem"><button type="button" id="add" @click="add">新增項目</button>
+        <h3>To&emsp;Do&emsp;List</h3>    
+        <button type="button" id="search"></button>
+        <input type="text" v-model="listItem">
+        <button type="button" id="add" @click="add">新增項目</button>
+        <button type="button" id="removeAll" @click="removeAll(index)">刪除全部項目</button>
         <ol>
-            <li v-for="item in items">
+            <li v-for="(item, index) in items">
                 {{ item.text }}
+                <button type="button" id="remove" @click="remove(index)">刪除項目</button>                                
             </li>
-            <button type="button" id="remove" @click="remove(item)">刪除項目</button>            
         </ol>    
     </main>    
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
 <script src="https://unpkg.com/vue@2.6.12/dist/vue.js"></script>  
 <script src="ToDoList.js" type="text/javascript"></script>    
-<!-- <a href="https://www.flaticon.com/free-icons/to-do" title="to do icons">To do icons created by Freepik - Flaticon</a> -->
 </body>
 </html>
