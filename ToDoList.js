@@ -7,7 +7,7 @@ $(document).ready(function(){
         el:'#list',
         data:{
             listItem:'',    /* 用來儲存user輸入的任務 */
-            status: 'no',   /* 目前任務狀態為未完成 */
+            status: 'no',   /* 預設任務狀態為未完成 */
             items:[{
                 id: '',
                 text:  '',
@@ -17,10 +17,9 @@ $(document).ready(function(){
         methods:{
             /* 新增任務 */
             add:function() {
-                var text = this.listItem;
-                var id = Math.floor(Date.now());
+                var text = this.listItem.trim();
+                var id = Date.now();
                 if (!text) { return false }
-
                 this.items.push({
                     id: id,
                     text: text,
@@ -31,12 +30,16 @@ $(document).ready(function(){
 
             /* 刪除任務 */
             remove:function(index) {
-                this.items.splice(index, 1); /* 從此任務開始刪除，到這個任務為止。 */
-                return confirm("要刪除嗎？");
+                if (!confirm("要刪除嗎？")) {
+                    return false
+                }
+                else {this.items.splice(index, 1);} /* 從此任務開始刪除，到這個任務為止。 */
             },
-            removeAll:function(index) {
-                this.items.splice(index);    /* 刪除全部。 */
-                return confirm("要刪除全部任務嗎？");                
+            removeAll:function(index) {   
+                if (!confirm("要刪除全部任務嗎？")) {
+                    return false
+                }
+                else {this.items.splice(index);}  /* 刪除全部。 */                      
             }
         },
 
