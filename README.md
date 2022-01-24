@@ -13,6 +13,6 @@
 ### 一更新任務狀態
 #### 勾選或取消勾選核取方塊，即可更新任務狀態。<br><br><br><br>   
 ### 一刪除任務
-#### ◆ 刪除單一任務：按下某任務右方![X紅色按鈕](https://github.com/Yilongasus/ToDoList/blob/master/instruction/delete.PNG)，即可刪除此項任務。
-#### ◆ 刪除全部任務：按下清單左下方!["刪除全部任務"紅色按鈕](https://github.com/Yilongasus/ToDoList/blob/master/instruction/deleteAll.PNG)，即可刪除所有任務。
+#### ◆ 刪除單一任務：按下某任務右方![X紅色按鈕](https://github.com/Yilongasus/ToDoList/blob/master/instruction/delete.PNG) ，即可刪除此項任務。
+#### ◆ 刪除全部任務：按下清單左下方!["刪除全部任務"紅色按鈕](https://github.com/Yilongasus/ToDoList/blob/master/instruction/deleteAll.PNG) ，即可刪除所有任務。
 <hr>
