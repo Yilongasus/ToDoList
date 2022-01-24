@@ -22,7 +22,7 @@
             <input type="text" v-model="listItem" placeholder="請輸入任務名稱...">
             <button type="button" id="add" @click="add">+</button>
             <ol>
-                <li v-for="(item, index) in filterItems">
+                <li v-for="(item, index) in filterItems" v-if="item.text !=''">
                     <span class="index">{{ index + 1 }}</span>
                     <input type="checkbox" v-model="item.completed">                   
                     <label :class="{ 'completed':item.completed }">&nbsp;{{ item.text }}</label>
