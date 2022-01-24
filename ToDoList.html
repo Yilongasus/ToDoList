@@ -24,14 +24,15 @@
             <ol>
                 <li v-for="(item, index) in filterItems">
                     <span class="index">{{ index + 1 }}</span>
-                    <label :class="{ 'completed':item.completed }">&nbsp;{{ item.text }}</label>
                     <input type="checkbox" v-model="item.completed">                   
-                    <button type="button" id="remove" @click="remove(index)">一</button>                         
+                    <label :class="{ 'completed':item.completed }">&nbsp;{{ item.text }}</label>
+                    &nbsp;<button type="button" id="remove" @click="remove(index)">×</button>                                                              
                 </li>
             </ol>   
             <button type="button" id="removeAll" @click="removeAll(index)">刪除全部任務</button>  
         </section>       
-    </main>    
+    </main>   
+<div id="topButton" title="到頂端">Λ</div>     
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
 <script src="https://unpkg.com/vue@2.6.12/dist/vue.js"></script>  
 <script src="ToDoList.js" type="text/javascript"></script>   
