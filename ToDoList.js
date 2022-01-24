@@ -1,8 +1,3 @@
-$(window).on('load', function(){
-    // $('#list').hide();
-    // $('#list').fadeIn(100);  
-});
-
 $(document).ready(function(){
     new Vue({
         el:'#list',
@@ -10,7 +5,7 @@ $(document).ready(function(){
             listItem:'',    /* 用來儲存user輸入的任務 */
             status: 'no',   /* 預設任務狀態為未完成 */
             items:[{
-                id: '',
+                id: -1,
                 text: '',
                 completed: false
             }]
@@ -56,9 +51,9 @@ $(document).ready(function(){
                     this.items.forEach(function(item) {
                         if (!item.completed) {
                             Items.push(item);
-                        }
+                        } 
                     })
-                    return Items;
+                    return Items;   
                 }
 
                 /* 當任務狀態勾選時，

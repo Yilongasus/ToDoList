@@ -3,7 +3,7 @@ html, body {
     padding:0;
     height: 100%;  
     font-family: "Microsoft Jhenghei", "Avant Garde", sans;         
-    background-color: #555562;
+    background: linear-gradient(to right, #42424C, #474752, #4C4C57);
 }
 
 /* 任務清單主體 */
@@ -94,24 +94,29 @@ section:hover {
 }
 
 /* 任務清單 */
-.index {
-    font-weight: 700;
-    padding: 0 0.5rem;   
-    border-radius: 10px;    
-    background-color: #fff;     
-}
-
 ol {
-    padding-left: 0;
-    list-style: none;
+    list-style-type: none;   
+    padding-left: 0; 
+    counter-reset: olListCount;
 }
 
+ol li:before {
+    font-weight: 700;
+    padding: 0 0.5rem;
+    margin-right: 0.2rem;       
+    border-radius: 10px;    
+    background-color: #fff;       
+    counter-increment: olListCount;
+    content: counter(olListCount);
+}
+  
 ol li {
     font-weight: 800;
     padding: 0.7rem;
     margin: 0.6rem 0;
     border-radius: 10px;
     background-color: #D3BA9C;
+    position: relative;    
 }
 
 .completed {
