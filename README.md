@@ -2,6 +2,7 @@
 ### 網址連結：[ToDoList](https://cyut107.github.io/)
 
 <hr>
+
 ## 使用說明
 ### 一新增任務
 #### 在[!["請輸入任務名稱..."輸入框]](https://github.com/Yilongasus/ToDoList/blob/master/instruction/textInput.PNG)，輸入任務名稱，再按下右方[![+咖啡色按鈕]](https://github.com/Yilongasus/ToDoList/blob/master/instruction/add.PNG)，即可完成新增任務。<br><br><br><br>    
@@ -15,4 +16,5 @@
 ### 一刪除任務
 #### ◆ 刪除單一任務：按下某任務右方[![X紅色按鈕]](https://github.com/Yilongasus/ToDoList/blob/master/instruction/delete.PNG)，即可刪除此項任務。
 #### ◆ 刪除全部任務：按下清單左下方[![["刪除全部任務"紅色按鈕]](https://github.com/Yilongasus/ToDoList/blob/master/instruction/deleteAll.PNG)，即可刪除所有任務。
+
 <hr>
