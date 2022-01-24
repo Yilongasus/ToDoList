@@ -18,15 +18,15 @@
             </ul>
         </aside>    
         <h2>To&nbsp;Do&nbsp;List</h2>    
-        <!-- <button type="button" id="search"></button> -->
         <section>
             <input type="text" v-model="listItem" placeholder="請輸入任務名稱...">
             <button type="button" id="add" @click="add">+</button>
             <ol>
                 <li v-for="(item, index) in filterItems">
-                    <input type="checkbox" v-model="item.completed">
-                    <label :class="{ 'completed':item.completed }">{{ item.text }}</label> 
-                    &emsp;<button type="button" id="remove" @click="remove(index)">一</button>                         
+                    <span class="index">{{ index + 1 }}</span>
+                    <label :class="{ 'completed':item.completed }">&nbsp;{{ item.text }}</label>
+                    <input type="checkbox" v-model="item.completed">                   
+                    <button type="button" id="remove" @click="remove(index)">一</button>                         
                 </li>
             </ol>   
             <button type="button" id="removeAll" @click="removeAll(index)">刪除全部任務</button>  
