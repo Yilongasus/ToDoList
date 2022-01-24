@@ -15,6 +15,8 @@
 #### 點擊![勾選](https://github.com/Yilongasus/ToDoList/blob/master/instruction/yes.PNG)或![取消勾選](https://github.com/Yilongasus/ToDoList/blob/master/instruction/no.PNG)核取方塊，即可更新任務狀態。<br><br><br><br>   
 ### 一刪除任務
 #### ◆ 刪除單一任務：按下某任務右方![X紅色按鈕](https://github.com/Yilongasus/ToDoList/blob/master/instruction/delete.PNG)，即可刪除此項任務。
-#### ◆ 刪除全部任務：按下清單左下方!["刪除全部任務"紅色按鈕](https://github.com/Yilongasus/ToDoList/blob/master/instruction/deleteAll.PNG)，即可刪除所有任務。
+#### ◆ 刪除全部任務：按下清單左下方!["刪除全部任務"紅色按鈕](https://github.com/Yilongasus/ToDoList/blob/master/instruction/deleteAll.PNG)，即可刪除所有任務。<br><br><br><br>
+### 一置頂按鈕
+#### 當新增任務項目到右方卷軸出現時，會出現![置頂按鈕](https://github.com/Yilongasus/ToDoList/blob/master/instruction/topBtn.PNG)讓您可以快速回到網頁最上方。
 
 <hr>
