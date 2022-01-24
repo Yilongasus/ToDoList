@@ -5,7 +5,7 @@ $(document).ready(function(){
             listItem:'',    /* 用來儲存user輸入的任務 */
             status: 'no',   /* 預設任務狀態為未完成 */
             items:[{
-                id: -1,
+                id: '',
                 text: '',
                 completed: false
             }]
@@ -51,6 +51,7 @@ $(document).ready(function(){
                     this.items.forEach(function(item) {
                         if (!item.completed) {
                             Items.push(item);
+                            console.log(item.completed);
                         } 
                     })
                     return Items;   
