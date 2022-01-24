@@ -4,7 +4,7 @@
 <hr>
 ## 使用說明
 ### 一新增任務
-#### 在!["請輸入任務名稱..."輸入框](https://github.com/Yilongasus/ToDoList/blob/master/instruction/textInput.PNG) ，輸入任務名稱，再按下右方![+咖啡色按鈕](https://github.com/Yilongasus/ToDoList/blob/master/instruction/add.PNG) ，即可完成新增任務。<br><br><br><br>    
+#### 在，輸入任務名稱，再按下右方![+咖啡色按鈕](https://github.com/Yilongasus/ToDoList/blob/master/instruction/add.PNG) ，即可完成新增任務。<br><br><br><br>    
 ### 一查看任務列表 
 #### 清單分為未完成、已完成、所有共三個分頁。
 #### ◆ 未完成：顯示未勾選的任務。
