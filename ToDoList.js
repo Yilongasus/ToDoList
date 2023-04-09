@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
     new Vue({
         el:'#list',
         data:{
